@@ -3,7 +3,7 @@ export class CreateCarDTO {
     description: string;
     plate: string;
     isFavorite: boolean;
-    year: string;
+    year: Date;
     color: string;
-    price: numbe;
+    price: number;
 }

@@ -1,5 +1,6 @@
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryColumn, UpdateDateColumn }
 from "typeorm";
+import {v4 as uuid} from 'uuid'
 
 @Entity()
 export class Cars {
@@ -17,7 +18,7 @@ export class Cars {
     plate: string;
 
     @Column()
-    year: string;
+    year: Date;
 
     @Column()
     color: string;
@@ -25,7 +26,7 @@ export class Cars {
     @Column({type: 'decimal'})
     price: number
 
-    @Column()
+    @Column({default: false})
     isFavorite: boolean;
     
     @CreateDateColumn()
