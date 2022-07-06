@@ -1,0 +1,22 @@
+version: '2.0'
+
+services: 
+  api:
+    container_name: corelab-api-challenge
+    build: .
+    ports: 
+      - "3003:3003"
+    volumes: 
+      - .:/home/corelab-api-challenge
+      - /home/corelab-api-challenge/node_modules
+    depends_on:
+      - database
+  database: 
+    image: postgres:latest
+    container_name: challenge-db
+    environment:
+      POSTGRES_DB: challenge-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456789
+    ports:
+      - "5444:5432"
