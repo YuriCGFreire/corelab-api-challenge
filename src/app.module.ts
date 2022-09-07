@@ -14,12 +14,10 @@ import { CarsModule } from './cars/cars.module';
       username: process.env.TYPEORM_USERNAME,
       password: process.env.TYPEORM_PASSWORD,
       database: process.env.TYPEORM_DATABASE,
-      entities: [
-        join(__dirname, '**', '*.entity.{ts,js}')
-      ],
+      entities: [join(__dirname, '**', '*.entity.{ts,js}')],
       synchronize: true,
     } as TypeOrmModuleOptions),
-    CarsModule
+    CarsModule,
   ],
   controllers: [],
   providers: [],

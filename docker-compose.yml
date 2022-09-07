@@ -5,7 +5,7 @@ services:
     container_name: corelab-api-challenge
     build: .
     ports: 
-      - "3003:3003"
+      - "3333:3333"
     volumes: 
       - .:/home/corelab-api-challenge
       - /home/corelab-api-challenge/node_modules
